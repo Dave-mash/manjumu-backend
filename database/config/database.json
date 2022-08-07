@@ -1,0 +1,12 @@
+{
+  "development": {
+    "url": "postgres://postgres:password@127.0.0.1:5432/brandykicks_dev",
+    "dialect": "postgres"
+  },
+  "test": {
+    "dialect": "postgres"
+  },
+  "production": {
+    "dialect": "postgres"
+  }
+}

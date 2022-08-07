@@ -1,8 +1,10 @@
-const express = require('express')
+require('dotenv').config();
+const express = require('express');
+
 const app = express()
 
-app.get('/', function (req, res) {
-  res.send('Hello World')
-})
+app.use(express.json());
+app.use(express.urlencoded({ extended: true }));
+require('./routes/product.routes')(app);
 
-app.listen(3000)
+app.listen(3000, () => console.log('Server running on port 3000!'))

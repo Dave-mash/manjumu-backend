@@ -1,0 +1,28 @@
+'use strict';
+const {
+  Model
+} = require('sequelize');
+module.exports = (sequelize, DataTypes) => {
+  class ShoppingSession extends Model {
+    /**
+     * Helper method for defining associations.
+     * This method is not a part of Sequelize lifecycle.
+     * The `models/index` file will call this method automatically.
+     */
+    static associate(models) {
+      ShoppingSession.hasOne(models.Cart, {
+        foreignKey: 'cartId',
+        as: 'session',
+        onDelete: 'CASCADE',
+      });
+    }
+  };
+  ShoppingSession.init({
+    userId: DataTypes.STRING,
+    total: DataTypes.DECIMAL
+  }, {
+    sequelize,
+    modelName: 'ShoppingSession',
+  });
+  return ShoppingSession;
+};
