@@ -49,7 +49,7 @@ module.exports = {
         allowNull: false,
         type: Sequelize.STRING
       },
-      imgId: {
+      imgToken: {
         allowNull: false,
         type: Sequelize.STRING
       },

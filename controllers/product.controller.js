@@ -118,7 +118,7 @@ exports.findAll = async (req, res) => {
                 'price',
                 'discountId',
                 'brand',
-                'imgUrl'
+                // 'imgUrl'
             ]
         });
 

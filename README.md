@@ -2,10 +2,10 @@
 A simplified sneaker ecommerce api mvp
 
 ## Prerequisites
-- NodeJS v16^
-- Postgresql v10^
+- NodeJS ^v16
+- Postgresql ^v10
+- Git ^v2
 - Postman
-- Git v2
 
 ## Technologies
 - Express
@@ -43,7 +43,7 @@ A simplified sneaker ecommerce api mvp
 1. Clone this repo: ```git clone https://github.com/Dave-mash/manjumu-backend.git```
 2. Move into project directory and install dependencies: ```cd manjumu-backend && npm i```
 3. Run migrations: ```npx sequelize db:migrate```
-4. Seed some data: ```npx sequelize-cli db:seed:all```
+4. Seed some data (only discounts, inventories and products entries available): ```npx sequelize-cli db:seed:all```
 3. ```npm run dev```
 
 ## Authors
